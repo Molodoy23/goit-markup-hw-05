@@ -349,17 +349,83 @@
             </li>
           </ul>
         </div>
+        <form class="form js-speaker-form">
+        <div class="subscribe">
+          <h2 class="title-subscribe social-footer">Подпишитесь на рассылку</h2>
+          <input class="form-subscribe" type="email" name="email" placeholder="E-mail" id="email">
+        </div>
+        <div class="button-submit">
+          <button type="submit" class="submit buy-button">Подписаться
+             <svg class="submit-icon">
+            <use href="./images/icons/symbol-defs.svg#icon-icon-send"></use>
+          </svg>
+          </button>
+         
+        </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
 <div class="modal">
+  <form class="form-modal js-speaker-form">
+  <h2 class="title-modal">Оставьте свои данные, мы вам перезвоним</h2>
   <button type="button" class="exit-modal" data-modal-close>
     <svg class="icon-exit" >
       <use href="./images/icons/symbol-defs.svg#icon-icon-exit"></use>
     </svg>
   </button>
+  <div class="group">
+      <label class="title-field" for="name">Имя</label>
+    <input class="user-field" type="name" id="name">
+    <span class="form-icon">
+      <svg class="item-icon-form">
+      <use  href="./images/icons/symbol-defs.svg#icon-person"></use>
+    </svg>
+    </span>
+</div>
+<div class="group">
+  <label class="title-field" for="tel">Телефон</label>
+    <input class="user-field" type="tel" id="tel">
+     <span class="form-icon">
+      <svg class="item-icon-form">
+      <use  href="./images/icons/symbol-defs.svg#icon-phone"></use>
+    </svg>
+</div>
+<div class="group">
+  <label class="title-field" for="form-email">Почта</label>
+    <input class="user-field" type="email" id="form-email">
+     <span class="form-icon">
+      <svg class="item-icon-form">
+      <use  href="./images/icons/symbol-defs.svg#icon-email"></use>
+    </svg>
+</div>
+<div class="group">
+ <label class="title-field">Комментарий</label>
+  <textarea class="user-field feed-back" name="feedback" rows="8" placeholder="Введите текст"></textarea>
+  
+</div>
+<div class="form-field">
+  <label class="agree-policy" for="policy">
+    <input class="policy-checkbox" type="checkbox" name="policy" id="policy"/>
+        <span class="checkbox-icon">
+    </span>
+     Соглашаюсь с рассылкой и принимаю 
+    <span>
+  <a class="link-policy" href="https://www.pornhub.com">Условия договора</a>
+  </span>
+    
+
+</label>
+  
+  
+</div>
+<div class="form-submit">
+  <button class="buttom-subc buy-button" type="submit">Отправить</button>
+</div>
+</form>
 </div>
     </div>
      <script src="./modal.js"></script>
   </body>
 </html>
+ 

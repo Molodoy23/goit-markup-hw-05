@@ -71,6 +71,9 @@ li {
   bottom: 0;
   border-radius: 2px;
 }
+.group:not(:last-child) {
+  margin-bottom: 10px;
+}
 .items::after {
   display: block;
   content: '';
@@ -149,6 +152,7 @@ main {
   margin: 0 auto;
 }
 .buy-button {
+  font-family: 'Roboto';
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
@@ -302,7 +306,6 @@ main {
   left: 50%;
 
   width: 530px;
-  height: 580px;
   background-color: var(--title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -312,18 +315,18 @@ main {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.exit-modal {
-  position: absolute;
-  right: 0px;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 8px;
-  margin-right: 8px;
+.title-modal {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0.86;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 40px;
+  margin-bottom: 12px;
+  color: #212121;
 }
-
 .card-name {
   font-weight: 500;
   font-size: 16px;
@@ -386,7 +389,7 @@ address {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 60px;
 }
-.footer-iteFms:not(:last-child) {
+.footer-items:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer-contacts:last-child {
@@ -394,7 +397,6 @@ address {
 }
 .social-footer {
   display: inline-flex;
-  justify-content: center;
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 14px;
@@ -403,8 +405,12 @@ address {
   text-transform: uppercase;
   color: var(--title-color);
 }
+.social-footer:not(:last-child) {
+  margin-right: 93px;
+}
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 /* Portfolio */
@@ -583,7 +589,7 @@ address {
 .client-item:not(:last-child) {
   margin-right: 30px;
 }
-/* Иконки */
+
 .icon-footer {
   width: 20px;
   height: 20px;
@@ -613,11 +619,29 @@ address {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.exit-modal {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.exit-modal:hover .icon-exit {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--main-color);
+}
 .card-icon {
   display: flex;
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+}
+.form {
+  display: flex;
+  align-items: end;
 }
 .section-icons {
   display: flex;
@@ -648,4 +672,151 @@ address {
   width: 11px;
   height: 11px;
   fill: var(--second-icon-color);
+}
+.subscribe .form-subscribe {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--bg-hero-and-footer);
+  color: var(--title-color);
+  padding: 15px;
+  height: 50px;
+  width: 350px;
+}
+.form-subscribe::placeholder {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.feed-back {
+  padding: 12px 16px;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+}
+.button-submit {
+  margin-left: 12px;
+}
+.submit {
+  display: flex;
+  align-items: center;
+}
+.submit-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.link-policy {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.agree-policy {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--description-color);
+}
+.title-field {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--description-color);
+}
+.group:focus-within > .form-icon {
+  fill: var(--main-color);
+}
+
+.form-modal {
+  width: 448px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.group {
+  position: relative;
+  flex-direction: column;
+}
+.user-field {
+  position: relative;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  width: 100%;
+}
+.user-field:not(:last-child) {
+  padding-left: 42px;
+}
+.user-field:focus-within {
+  outline: none;
+  border: 1px solid var(--main-color);
+}
+.form-field {
+  margin-top: 10px;
+}
+.buttom-subc {
+  width: 200px;
+}
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+.title-field:not(:last-child) {
+  margin-bottom: 5px;
+}
+.form-icon {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(-50%);
+}
+.item-icon-form {
+  width: 15px;
+  height: 15px;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--second-color);
+  border-radius: 2px;
+}
+.agree-policy {
+  display: inline-block;
+  margin-top: 10px;
+}
+.policy-checkbox:checked + .checkbox-icon {
+  background-color: var(--main-color);
+  background-image: url('../images/icons/icon-checkbox.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
+  border-color: transparent;
+}
+.policy-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.user-field::placeholder {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
